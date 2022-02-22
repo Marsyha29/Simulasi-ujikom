@@ -7,24 +7,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="bg-blue-600 mx-14 my-24">
+<body class="bg-blue-800 mx-14 my-24">
     <div>
         <p class="text-center text-white text-4xl">PILIH JUMLAH PAKET TUNAI</p>
     </div>
     <div class="grid grid-cols-2 text-center">
         <div class="text-white text-4xl mt-10">
-        <a href=""><p class="mt-10"><- 100.000</p></a>
-        <a href=""><p class="mt-10"><- 200.000</p></a>
-        <a href=""><p class="mt-10"><- 300.000</p></a>
-        <a href=""><p class="mt-10"><- 500.000</p></a>
+       <button onclick="seRatus()"><p class="mt-10"><- 100.000</p></button>
+       <button onclick="duaRatus()"><p class="mt-10"><- 200.000</p></button>
+       <button onclick="tigaRatus()"><p class="mt-10"><- 300.000</p></button>
+       <button onclick="limaRatus()"><p class="mt-10"><- 500.000</p></button>
         </div>
         <div class="text-white text-4xl mt-14">
-        <a href=""><p class="mt-10">1.000.000 -></p></a>
-        <a href=""><p class="mt-10">1.500.000 -></p></a>
-        <a href=""><p class="mt-10">2.000.000 -></p></a>
-        <a href=""><p class="mt-10">TRANSAKSI<br> LAINNYA -></p></a>
+        <button onclick="satuJuta()"><p class="mt-10">1.000.000 -></p></button>
+        <button onclick="duaJuta()"><p class="mt-10">1.500.000 -></p></button>
+        <button onclick="tigaJuta()"><p class="mt-10">2.000.000 -></p></button>
+        <button onclick="lainnya()"><p class="mt-10">TRANSAKSI<br> LAINNYA -></p></button>
         </div>
         
     </div>
+    <script>
+        let saldo = 5000000;
+        let paket ={
+            seRatus:'100000'
+        };
+        function seRatus() {
+            let saldoakhir = saldo - paket.seratus;
+            confirm(`sisa saldo anda ${saldoakhir}` )
+            window.open('ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+
+    </script>
 </body>
 </html>
