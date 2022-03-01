@@ -11,30 +11,77 @@
     <div>
         <p class="text-center text-white text-4xl">PILIH JUMLAH PAKET TUNAI</p>
     </div>
-    <div class="grid grid-cols-2 text-center">
-        <div class="text-white text-4xl mt-10">
+    <div class="flex justify-center space-x-44 text-white text-4xl mt-12">
+        <div class="grid space-y-20 w-1/2">
        <button onclick="seRatus()"><p class="mt-10"><- 100.000</p></button>
        <button onclick="duaRatus()"><p class="mt-10"><- 200.000</p></button>
        <button onclick="tigaRatus()"><p class="mt-10"><- 300.000</p></button>
        <button onclick="limaRatus()"><p class="mt-10"><- 500.000</p></button>
         </div>
-        <div class="text-white text-4xl mt-14">
+        <div class="grid space-y-20 w-1/2">
         <button onclick="satuJuta()"><p class="mt-10">1.000.000 -></p></button>
-        <button onclick="duaJuta()"><p class="mt-10">1.500.000 -></p></button>
-        <button onclick="tigaJuta()"><p class="mt-10">2.000.000 -></p></button>
-        <button onclick="lainnya()"><p class="mt-10">TRANSAKSI<br> LAINNYA -></p></button>
+        <button onclick="satuJutaLimaRatus()"><p class="mt-10">1.500.000 -></p></button>
+        <button onclick="duaJuta()"><p class="mt-10">2.000.000 -></p></button>
+        <a href="/view/lainnya.html"><p class="mt-10">TRANSAKSI LAINNYA -></p></a>
         </div>
         
     </div>
     <script>
         let saldo = 5000000;
         let paket ={
-            seRatus:'100000'
+            seratus:'100000',
+            duaratus:'200000',
+            tigaratus:'300000',
+            limaratus:'500000',
+            satujuta:'1000000',
+            satujutalimaratus:'1500000',
+            duajuta:'2000000',
+            
         };
         function seRatus() {
             let saldoakhir = saldo - paket.seratus;
             confirm(`sisa saldo anda ${saldoakhir}` )
-            window.open('ambil.html', '_blank')
+            window.open('/view/ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+        function duaRatus() {
+            let saldoakhir = saldo - paket.seratus;
+            confirm(`sisa saldo anda ${saldoakhir}` )
+            window.open('/view/ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+        function tigaRatus() {
+            let saldoakhir = saldo - paket.seratus;
+            confirm(`sisa saldo anda ${saldoakhir}` )
+            window.open('/view/ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+        function limaRatus() {
+            let saldoakhir = saldo - paket.seratus;
+            confirm(`sisa saldo anda ${saldoakhir}` )
+            window.open('/view/ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+        function satuJuta() {
+            let saldoakhir = saldo - paket.seratus;
+            confirm(`sisa saldo anda ${saldoakhir}` )
+            window.open('/view/ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+        function satuJutaLimaRatus() {
+            let saldoakhir = saldo - paket.seratus;
+            confirm(`sisa saldo anda ${saldoakhir}` )
+            window.open('/view/ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+        function duaJuta() {
+            let saldoakhir = saldo - paket.seratus;
+            confirm(`sisa saldo anda ${saldoakhir}` )
+            window.open('/view/ambil.html', '_blank')
+            window.close('tunai.html');
+        }
+        function lainNya() {
+            window.open('/view/lainnya.html', '_blank')
             window.close('tunai.html');
         }
 
